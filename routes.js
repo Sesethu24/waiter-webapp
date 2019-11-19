@@ -1,10 +1,17 @@
-module.exports = function Routes(){
+module.exports = function Routes(myWaiters){
     
     async function index(req, res) {
-        
-       // res.render({})
+        res.render("index")
     }
-    return {
-        index
+
+    async function admin(req, res) {
+        let listNames = await myWaiters.getWaiters()
+        res.render("admin", {
+            names: listNames
+        })
+    }
+    return { 
+        index,
+        admin
     }
 }

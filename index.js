@@ -7,6 +7,7 @@ const flash = require('express-flash');
 const session = require('express-session');
 const pg = require('pg');
 const Pool = pg.Pool;
+var exphbs = require('express-handlebars');
 
 let useSSL = false;
 let local = process.env.LOCAL || false;
@@ -31,7 +32,7 @@ app.use(session({
 app.use(flash())
 
 app.use("**/css", express.static("public/css"))
-var exphbs = require('express-handlebars');
+
 
 const handlebarSetup = exphbs({
   partialsDir: "./views/partials",
@@ -46,6 +47,8 @@ app.use(bodyParser.urlencoded({
 }))
 
 app.get('/', route.index)
+app.get('/admin', route.admin)
+
 let PORT = process.env.PORT || 3015;
 
 app.listen(PORT, function () {
