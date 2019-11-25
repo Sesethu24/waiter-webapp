@@ -4,6 +4,16 @@ module.exports = function Routes(myWaiters){
         res.render("index")
     }
 
+    async function addWaiters(req, res) {
+
+        let inputName = req.body.textBox;
+        let checkBox = req.body.days;
+        
+        await greetingsApp.setNames(inputName, checkBox)
+        res.redirect('/')
+        } 
+        
+    
     async function admin(req, res) {
         let listNames = await myWaiters.getWaiters()
         res.render("admin", {
@@ -12,6 +22,7 @@ module.exports = function Routes(myWaiters){
     }
     return { 
         index,
-        admin
+        admin,
+        addWaiters
     }
 }

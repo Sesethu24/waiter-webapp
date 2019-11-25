@@ -47,7 +47,8 @@ app.use(bodyParser.urlencoded({
 }))
 
 app.get('/', route.index)
-app.get('/admin', route.admin)
+app.post('/waiters:username', route.addWaiters)
+app.get('/waiters:username', route.admin)
 
 let PORT = process.env.PORT || 3015;
 

@@ -2,8 +2,8 @@ module.exports = function Waiters(pool){
     
     async function theWaiters (param) {
         let input = param
-        let days = await pool.query('SELECT * FROM admins WHERE days_ = $1', [input])
-        return days
+        let waiters = await pool.query('SELECT * FROM admins WHERE days_ = $1', [input])
+        return waiters
     }
 
     async function getWaiters () {

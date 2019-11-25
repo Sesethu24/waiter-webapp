@@ -20,48 +20,48 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="addon-wrapping">@</span>
                     </div>
-                    <input type="text" class="form-control" placeholder="Name" aria-label="Username"
+                    <input type="text" class="form-control" name="textBox" placeholder="Name" aria-label="Username"
                         aria-describedby="addon-wrapping">
                 </div>
             </div>
         </div>
 
-    </form>
+    
     <div class="row">
         <div style="padding-left: 30%;padding-top:2%" class="col-12">
 
-            <form action="/waiters:username" method="GET">
+           
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="monday">
+                    <input class="form-check-input" type="checkbox" name="days" id="inlineCheckbox1" value="monday">
                     <label class="form-check-label" for="inlineCheckbox1">Monday</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="tuesday">
+                    <input class="form-check-input" type="checkbox" name="days" id="inlineCheckbox2" value="tuesday">
                     <label class="form-check-label" for="inlineCheckbox2">Tuesday</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="wednesday">
+                    <input class="form-check-input" type="checkbox" name="days" id="inlineCheckbox3" value="wednesday">
                     <label class="form-check-label" for="inlineCheckbox3">Wednesday</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="thursday">
+                    <input class="form-check-input" type="checkbox" name="days" id="inlineCheckbox4" value="thursday">
                     <label class="form-check-label" for="inlineCheckbox4">Thursday</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="friday">
+                    <input class="form-check-input" type="checkbox" name="days" id="inlineCheckbox5" value="friday">
                     <label class="form-check-label" for="inlineCheckbox5">Friday</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="saturday">
+                    <input class="form-check-input" type="checkbox" name="days" id="inlineCheckbox6" value="saturday">
                     <label class="form-check-label" for="inlineCheckbox6">Saturday</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="sunday">
+                    <input class="form-check-input" type="checkbox" name="days" id="inlineCheckbox7" value="sunday">
                     <label class="form-check-label" for="inlineCheckbox7">Sunday</label>
                 </div>
                 <br>
                 <br>
-                <a class="btn btn-primary" href="/admin" role="button">Update</a>
+                <a class="btn btn-primary" href="/waiters" role="button">Update</a>
 
             </form>
         </div>
