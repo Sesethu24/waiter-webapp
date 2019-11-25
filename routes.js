@@ -9,7 +9,7 @@ module.exports = function Routes(myWaiters){
         let inputName = req.body.textBox;
         let checkBox = req.body.days;
         
-        await greetingsApp.setNames(inputName, checkBox)
+        await myWaiters.theWaiters(inputName, checkBox)
         res.redirect('/')
         } 
         
