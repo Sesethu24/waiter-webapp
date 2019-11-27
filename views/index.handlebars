@@ -13,8 +13,8 @@
 
 
     <form action="/waiters:username" method="POST">
-        <h1 style="padding-left: 33%;">Waiter App</h1>
-        <div class="row">
+        <h1 style="padding-left: 33%;">Waiter page</h1>
+        {{!-- <div class="row">
             <div style="padding-left: 30%;padding-top:2%" class="col-6">
                 <div class="input-group flex-nowrap">
                     <div class="input-group-prepend">
@@ -24,13 +24,14 @@
                         aria-describedby="addon-wrapping">
                 </div>
             </div>
-        </div>
+        </div> --}}
+        <h2 style="padding-left: 20%;padding-top:3%">Welcome waiter please update days you would like to work
+            this week</h2>
 
-    
-    <div class="row">
-        <div style="padding-left: 30%;padding-top:2%" class="col-12">
+        <div class="row">
+            <div style="padding-left: 30%;padding-top:3%" class="col-12">
 
-           
+
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" name="days" id="inlineCheckbox1" value="monday">
                     <label class="form-check-label" for="inlineCheckbox1">Monday</label>
@@ -64,8 +65,8 @@
                 <button type="submit" class="btn btn-success text-white">update</button>
                 {{!-- <a class="btn btn-primary" href="/waiters" role="button">see waiters</a> --}}
 
-            </form>
-        </div>
+    </form>
+    </div>
     </div>
 
 </body>
