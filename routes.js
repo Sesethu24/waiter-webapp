@@ -4,25 +4,29 @@ module.exports = function Routes(myWaiters){
         res.render("index")
     }
 
-    async function addWaiters(req, res) {
+    async function Waiters(req, res) {
 
         let inputName = req.body.textBox;
         let checkBox = req.body.days;
+        console.log(inputName, checkBox);
         
-        await myWaiters.theWaiters(inputName, checkBox)
+        await myWaiters.addWaiters(inputName, checkBox)
         res.redirect('/')
         } 
         
     
     async function admin(req, res) {
         let listNames = await myWaiters.getWaiters()
+        console.log("list",listNames);
+        
         res.render("admin", {
-            names: listNames
+            names: listNames,
+        
         })
     }
     return { 
         index,
         admin,
-        addWaiters
+        Waiters
     }
 }
