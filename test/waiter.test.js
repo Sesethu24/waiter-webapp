@@ -3,7 +3,7 @@ const Waiters = require('../waiter');
 const pg = require("pg");
 const Pool = pg.Pool;
 
-const connectionString = process.env.DATABASE_URL || 'postgresql://sethu:codex123@localhost:5432/waiter_tests';
+const connectionString = process.env.DATABASE_URL || 'postgresql://sesh:pg123@localhost:5432/waiter_tests';
 
 const pool = new Pool({
     connectionString

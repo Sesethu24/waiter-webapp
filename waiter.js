@@ -3,7 +3,7 @@ module.exports = function Waiters(pool) {
     async function addWaiters(param) {
 
         let input = param
-        await pool.query('INSERT INTO waiters (name_,days_) VALUES ($1,$2);', [input, 1])
+        await pool.query('INSERT INTO waiters (name_) VALUES ($1);', [input])
        
         // let waiters = await pool.query('SELECT * FROM waiters WHERE days_ = $1', [input])
         // UPDATE table

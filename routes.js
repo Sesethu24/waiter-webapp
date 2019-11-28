@@ -19,7 +19,7 @@ module.exports = function Routes(myWaiters){
         let listNames = await myWaiters.getWaiters()
         console.log("list",listNames);
         
-        res.render("admin", {
+        res.render("/waiters:username", {
             names: listNames,
         
         })
