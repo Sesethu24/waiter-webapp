@@ -10,55 +10,28 @@
 </head>
 
 <body>
-
-
     <form action="/waiters:username" method="POST">
         <h1 style="padding-left: 33%;">Waiter page</h1>
-        
-        <h2 style="padding-left: 20%;padding-top:3%">Welcome waiter please update days you would like to work
+        <h2 style="padding-left: 20%;padding-top:3%">Welcome {{name_}} please update days you would like to work
             this week</h2>
 
         <div class="row">
             <div style="padding-left: 30%;padding-top:3%" class="col-12">
 
-
+                {{/each days}}
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" name="days" id="inlineCheckbox1" value="monday">
-                    <label class="form-check-label" for="inlineCheckbox1">Monday</label>
+                    <label class="form-check-label" for="inlineCheckbox1">Monday {{days}}</label>{{days}}
                 </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="days" id="inlineCheckbox2" value="tuesday">
-                    <label class="form-check-label" for="inlineCheckbox2">Tuesday</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="days" id="inlineCheckbox3" value="wednesday">
-                    <label class="form-check-label" for="inlineCheckbox3">Wednesday</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="days" id="inlineCheckbox4" value="thursday">
-                    <label class="form-check-label" for="inlineCheckbox4">Thursday</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="days" id="inlineCheckbox5" value="friday">
-                    <label class="form-check-label" for="inlineCheckbox5">Friday</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="days" id="inlineCheckbox6" value="saturday">
-                    <label class="form-check-label" for="inlineCheckbox6">Saturday</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="days" id="inlineCheckbox7" value="sunday">
-                    <label class="form-check-label" for="inlineCheckbox7">Sunday</label>
-                </div>
+                {{#each}}
+
                 <br>
                 <br>
                 <button type="submit" class="btn btn-success text-white">update</button>
-                
 
+            </div>
+        </div>
     </form>
-    </div>
-    </div>
-
 </body>
 
 </html>

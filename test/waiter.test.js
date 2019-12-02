@@ -14,6 +14,7 @@ describe('The waiter web app', function () {
     beforeEach(async function () {
         await pool.query("delete from waiters;");
         await pool.query("delete from admins;");
+        await pool.query("delete from waiterDays");
     });
 
     it('should be able to add a waiter', async function () {
