@@ -1,5 +1,11 @@
 module.exports = function Routes(myWaiters) {
 
+    async function waiter(req,res) {
+      let usr = req.body.username
+      
+      res.redirect(`/waiters/:${usr}`)
+    }
+
     async function index(req, res) {
         res.render("index", {
             waiters: myWaiters.getWaiters()
@@ -14,13 +20,14 @@ module.exports = function Routes(myWaiters) {
     }
     async function adminPage(req, res) {
         let listNames = await myWaiters.getWaiters()
-        res.render("/waiters:username", {
-            names: listNames,
+        res.render("waiter", {
+            username: listNames,
         })
     }
     return {
         index,
         adminPage,
-        WaitersPage
+        WaitersPage,
+        waiter
     }
 }

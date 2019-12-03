@@ -12,18 +12,18 @@
 <body>
     <form action="/waiters:username" method="POST">
         <h1 style="padding-left: 33%;">Waiter page</h1>
-        <h2 style="padding-left: 20%;padding-top:3%">Welcome {{name_}} please update days you would like to work
+        <h2 style="padding-left: 20%;padding-top:3%">Welcome {{username}} please update days you would like to work
             this week</h2>
 
         <div class="row">
             <div style="padding-left: 30%;padding-top:3%" class="col-12">
 
-                {{/each days}}
+                {{#each days}}
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" name="days" id="inlineCheckbox1" value="monday">
-                    <label class="form-check-label" for="inlineCheckbox1">Monday {{days}}</label>{{days}}
+                    <label class="form-check-label" for="inlineCheckbox1">Monday {{days_}}</label>{{days_}}
                 </div>
-                {{#each}}
+                {{/each}}
 
                 <br>
                 <br>

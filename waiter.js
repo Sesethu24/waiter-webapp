@@ -14,6 +14,11 @@ module.exports = function Waiters(pool) {
         //}
         // return waiters
     }
+    async function getWaiter(){
+        let waiter = await pool.query('SELECT * FROM  waiters WHERE name_ = $1')
+        return waiter
+    }
+
 
     async function getWaiters() {
         let waiters = await pool.query('SELECT * FROM waiters')
@@ -27,6 +32,7 @@ module.exports = function Waiters(pool) {
     return {
         addWaiters,
         getWaiters,
-        getDays
+        getDays,
+        getWaiter
     }
 }
